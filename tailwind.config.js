@@ -7,6 +7,7 @@ export default {
       blue: "#007bff",
       info: "#17a2",
       white: "#fff",
+      warning: "#ffc107",
     },
     extend: {
       fontFamily: {
