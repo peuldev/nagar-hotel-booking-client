@@ -31,7 +31,7 @@ const Routes = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop></Shop>,
-      },<NavLink to="/">Home</NavLink>
+      },
     ],
   },
 ]);

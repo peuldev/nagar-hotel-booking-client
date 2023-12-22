@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { HiOutlineShoppingBag } from "react-icons/hi2";
 
 const Navbar = () => {
   const navLinkis = (
@@ -48,13 +49,21 @@ const Navbar = () => {
             {navLinkis}
           </ul>
         </div>
-        <a className="text-xl font-bold">NAGAR</a>
+        <Link to="/">
+          <a className="text-2xl font-semibold cursor-pointer">NAGAR</a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navLinkis}</ul>
+        <ul className="menu menu-horizontal px-1 text-base">{navLinkis}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <a className=" bg-blue hover:bg-info text-white px-5 py-2 rounded-full cursor-pointer text-base">
+          {" "}
+          Book now
+        </a>
+        <a className="text-2xl lg:ml-5 ml-2 cursor-pointer">
+          <HiOutlineShoppingBag />
+        </a>
       </div>
     </div>
   );
