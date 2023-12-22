@@ -6,6 +6,7 @@ import About from "../Pages/About/About";
 import Rooms from "../Pages/Rooms/Rooms";
 import Restaurant from "../Pages/Restaurant/Restaurant";
 import Shop from "../Pages/Shop/Shop";
+import DetailsOffers from "../components/SpecialOffers/DetailsOffers";
 
 const Routes = createBrowserRouter([
   {
@@ -31,6 +32,12 @@ const Routes = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop></Shop>,
+      },
+      {
+        path: "/detailsoffers/:id",
+        element: <DetailsOffers></DetailsOffers>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/offers${params.id}`),
       },
     ],
   },
