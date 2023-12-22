@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
+import "./Navbar.css";
 
 const Navbar = () => {
   const navLinkis = (
