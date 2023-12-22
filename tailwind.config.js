@@ -9,10 +9,12 @@ export default {
       white: "#fff",
       warning: "#ffc107",
       yellow: "#ffa505",
+      border: "#dedede",
     },
     extend: {
       fontFamily: {
         primary: ["'Jost', sans-serif"],
+        secondary: ["'Poppins', sans-serif"],
       },
     },
   },
