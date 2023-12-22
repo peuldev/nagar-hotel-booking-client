@@ -8,6 +8,8 @@ export default {
       info: "#17a2",
       white: "#fff",
       warning: "#ffc107",
+      yellow : "#ffa505",
+      
     },
     extend: {
       fontFamily: {

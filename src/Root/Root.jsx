@@ -5,11 +5,9 @@ import Footer from "../Pages/Shared/Footer/Footer";
 
 const Root = () => {
   return (
-    <div className="font-primary">
+    <div className="font-primary bg-[#ecfafb]">
       <Navbar></Navbar>
-      <div className="mx-2">
-        <Outlet></Outlet>
-      </div>
+      <Outlet></Outlet>
       <Footer></Footer>
     </div>
   );
