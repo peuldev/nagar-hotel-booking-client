@@ -7,6 +7,7 @@ import Rooms from "../Pages/Rooms/Rooms";
 import Restaurant from "../Pages/Restaurant/Restaurant";
 import Shop from "../Pages/Shop/Shop";
 import Details from "../components/SpecialOffers/Details";
+import DetailsFeaturedRoom from "../components/FeaturedRooms/DetailsFeaturedRoom";
 const Routes = createBrowserRouter([
   {
     path: "/",
@@ -37,6 +38,10 @@ const Routes = createBrowserRouter([
         element: <Details></Details>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/offers/${params.id}`),
+      },
+      {
+        path: "showfeaturedroom",
+        element: <DetailsFeaturedRoom></DetailsFeaturedRoom>,
       },
     ],
   },

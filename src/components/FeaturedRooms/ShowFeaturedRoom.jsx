@@ -4,7 +4,11 @@ import {
   FaRulerCombined,
   FaBinoculars,
   FaChevronRight,
+  FaEuroSign,
 } from "react-icons/fa";
+import { FaRegBookmark } from "react-icons/fa6";
+
+import { Link } from "react-router-dom";
 
 const ShowFeaturedRoom = ({ featuredRoom }) => {
   const { title, images, adults, size, view, price } = featuredRoom;
@@ -24,15 +28,27 @@ const ShowFeaturedRoom = ({ featuredRoom }) => {
           <FaBinoculars className=" text-blue text-base mr-2" />
           View: {view}{" "}
         </p>
+        <p className="text-[#656a70] flex items-center text-base">
+          <FaEuroSign className="text-base mr-2 text-[#64bc5f]" />
+          <span className="text-[#64bc5f] font-semibold">{price}</span>
+          <span className="ms-2 text-[#64688c]">per night</span>
+        </p>
       </div>
       <div className="p-4 flex items-center justify-between text-base">
-        <h3 className="bg-blue hover:bg-info p-3 text-white">From {price} / Night</h3>
-        <h3 className="flex items-center">
-          View Room{" "}
-          <span className="ml-2">
-            <FaChevronRight />
-          </span>
-        </h3>
+        <Link to="/rooms">
+          <div className="bg-blue flex items-center hover:bg-info p-3 text-white rounded-full">
+            <FaRegBookmark />
+            <span className="ms-2">Book Now</span>
+          </div>
+        </Link>
+        <Link to="/showfeaturedroom">
+          <h3 className="flex items-center">
+            View Room{" "}
+            <span className="ml-2">
+              <FaChevronRight />
+            </span>
+          </h3>
+        </Link>
       </div>
     </div>
   );
