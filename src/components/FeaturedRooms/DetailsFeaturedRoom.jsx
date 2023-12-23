@@ -1,6 +1,18 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
-import { FaBed, FaRulerCombined, FaBinoculars } from "react-icons/fa";
+import {
+  FaBed,
+  FaRulerCombined,
+  FaBinoculars,
+  FaWifi,
+  FaCocktail,
+  FaSwimmingPool,
+  FaChild,
+  FaTableTennis,
+  FaBath,
+  FaWheelchair,
+} from "react-icons/fa";
+import { MdHotTub } from "react-icons/md";
 
 const DetailsFeaturedRoom = () => {
   const featuredRooms = useLoaderData();
@@ -53,23 +65,47 @@ const DetailsFeaturedRoom = () => {
               <tbody>
                 {/* row 1 */}
                 <tr>
-                  <td>High speed in-room wifi</td>
-                  <td>Mini bar</td>
+                  <td>
+                    {" "}
+                    <FaWifi /> High speed in-room wifi
+                  </td>
+                  <td>
+                    <FaCocktail /> Mini bar
+                  </td>
                 </tr>
                 {/* row 2 */}
                 <tr>
-                  <td>Swimming pool</td>
-                  <td>Child friendly</td>
+                  <td>
+                    {" "}
+                    <FaSwimmingPool />
+                    Swimming pool
+                  </td>
+                  <td>
+                    {" "}
+                    <FaChild /> Child friendly
+                  </td>
                 </tr>
                 {/* row 3 */}
                 <tr>
-                  <td>Hot tub</td>
-                  <td>Games room</td>
+                  <td>
+                    {" "}
+                    <MdHotTub /> Hot tub
+                  </td>
+                  <td>
+                    {" "}
+                    <FaTableTennis /> Games room
+                  </td>
                 </tr>
                 {/* row 4 */}
                 <tr>
-                  <td>Bath</td>
-                  <td>Wheelchair access</td>
+                  <td>
+                    {" "}
+                    <FaBath /> Bath
+                  </td>
+                  <td>
+                    {" "}
+                    <FaWheelchair /> Wheelchair access
+                  </td>
                 </tr>
               </tbody>
             </table>
