@@ -9,6 +9,7 @@ import Shop from "../Pages/Shop/Shop";
 import Details from "../components/SpecialOffers/Details";
 import DetailsFeaturedRoom from "../components/FeaturedRooms/DetailsFeaturedRoom";
 import Login from "../Pages/Login/Login";
+import SignUp from "../Pages/SignUp/SignUp";
 const Routes = createBrowserRouter([
   {
     path: "/",
@@ -49,6 +50,10 @@ const Routes = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/signup",
+        element: <SignUp></SignUp>,
       },
     ],
   },
