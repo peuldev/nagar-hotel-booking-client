@@ -25,9 +25,9 @@ const Navbar = () => {
   return (
     <div>
       {/* nav start  */}
-      <div className="bg-base-100 border-b border-b-border">
+      <div className="bg-base-100 border-b border-b-border hidden lg:block md:block">
         <div className="max-w-7xl mx-auto font-secondary">
-          <div className="flex justify-between items-center mx-2 text-[#181b20]">
+          <div className="flex justify-between items-center lg:mx-2 md:ms-2 text-[#181b20]">
             <div className="flex py-2">
               <a href="https://en.wikipedia.org/wiki/Call_centre">
                 <h4>1111-2222-3333</h4>
@@ -36,10 +36,20 @@ const Navbar = () => {
                 <h4 className="ms-5">Dhaka Bangladesh</h4>
               </a>
             </div>
-            <div className="border p-3 border-b-0 border-t-0 border-border">
-              <Link to="/login">
-                <h3>My Account</h3>
-              </Link>
+            <div className="flex items-center">
+              <div className="border p-3 border-b-0 border-t-0 border-border">
+                <Link to="/login">
+                  <h3>My Account</h3>
+                </Link>
+              </div>
+              <div>
+                <Link to="/rooms">
+                  <a className=" bg-blue hover:bg-info text-white px-5 py-3 cursor-pointer text-base">
+                    {" "}
+                    Book now
+                  </a>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -80,21 +90,8 @@ const Navbar = () => {
               <a className="text-2xl font-semibold cursor-pointer">NAGAR</a>
             </Link>
           </div>
-          <div className="navbar-center hidden lg:flex">
+          <div className="navbar-end hidden lg:flex">
             <ul className="menu menu-horizontal px-1 text-base">{navLinkis}</ul>
-          </div>
-          <div className="navbar-end">
-            <Link to="/rooms">
-              <a className=" bg-blue hover:bg-info text-white px-5 py-2 rounded-full cursor-pointer text-base">
-                {" "}
-                Book now
-              </a>
-            </Link>
-            <div className="grid place-items-center">
-              <a className="text-2xl lg:ml-5 ml-2 cursor-pointer ">
-                <HiOutlineShoppingBag />
-              </a>
-            </div>
           </div>
         </div>
       </div>
