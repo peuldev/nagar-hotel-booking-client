@@ -10,10 +10,12 @@ import Details from "../components/SpecialOffers/Details";
 import DetailsFeaturedRoom from "../components/FeaturedRooms/DetailsFeaturedRoom";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 const Routes = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
