@@ -32,14 +32,14 @@ const Details = () => {
       </div>
       <div>
         <div className="flex justify-center">
-          <h1 className="lg:text-3xl md:text-2xl text-xl text-center border-b-2 border-b-warning my-5 py-5 inline">
+          <h1 className="lg:text-3xl md:text-2xl text-xl text-center border-b-2 border-b-warning my-5 py-5 inline font-primary">
             Offer Details
           </h1>
         </div>
         <p>{description}</p>
       </div>
       <div className="flex justify-center">
-        <h1 className="lg:text-3xl md:text-2xl text-xl text-center border-b-2 border-b-warning my-5 py-5 inline">
+        <h1 className="lg:text-3xl md:text-2xl text-xl text-center border-b-2 border-b-warning my-5 py-5 inline font-primary">
           Offer Includes{" "}
         </h1>
       </div>
