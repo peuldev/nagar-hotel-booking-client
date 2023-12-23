@@ -17,7 +17,9 @@ const Offers = () => {
               Special Offers
             </h1>
           </div>
-          {/* Offers Images  */}
+        </div>
+        {/* Offers Images  */}
+        <div className="mx-2 flex justify-center">
           <div className="py-10 grid lg:grid-cols-4 md:grid-cols-2 gap-5">
             {offers.map((offer) => (
               <SpecialOffers offer={offer} key={offer._id}></SpecialOffers>
