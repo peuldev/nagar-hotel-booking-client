@@ -11,7 +11,7 @@ const DetailsFeaturedRoom = () => {
       <div className="flex justify-center">
         <div className="mx-2">
           <h1 className="text-center text-2xl pt-5 pb-2">{title}</h1>
-          <div className="flex justify-center mb-5">
+          <div className="lg:flex md:flex flex-row justify-center mb-5">
             <p className="flex items-center mr-5">
               {" "}
               <FaBed className="text-blue text-base mr-2" />
@@ -38,7 +38,7 @@ const DetailsFeaturedRoom = () => {
             Room Description
           </h1>
         </div>
-        <div>
+        <div className="mx-2">
           <p>{description}</p>
         </div>
         <div className="flex justify-center">

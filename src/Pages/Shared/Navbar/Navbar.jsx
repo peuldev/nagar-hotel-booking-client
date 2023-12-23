@@ -62,14 +62,10 @@ const Navbar = () => {
             {" "}
             Book now
           </a>
-
-          <div className="indicator">
-            <span className="indicator-item badge  badge-info text-white">0</span>
-            <div className="grid place-items-center">
-              <a className="text-2xl lg:ml-5 ml-2 cursor-pointer ">
-                <HiOutlineShoppingBag />
-              </a>
-            </div>
+          <div className="grid place-items-center">
+            <a className="text-2xl lg:ml-5 ml-2 cursor-pointer ">
+              <HiOutlineShoppingBag />
+            </a>
           </div>
         </div>
       </div>
