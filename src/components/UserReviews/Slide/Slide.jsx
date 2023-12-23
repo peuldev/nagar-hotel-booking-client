@@ -17,7 +17,7 @@ import gest4 from "../../../assets/Guests/gest-t4.jpg";
 import { Pagination } from "swiper/modules";
 export const Slide = () => {
   return (
-    <div className="text-white">
+    <div className="text-white lg:pb-20 md:pb-10 pb-5">
       <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
         <SwiperSlide>
           <div className=" py-8">
