@@ -26,7 +26,7 @@ const FeaturedRooms = () => {
           </p>
         </div>
       </div>
-      <div className="font-secondary grid lg:grid-cols-2 md:grid-cols-2 gap-5">
+      <div className="font-secondary grid lg:grid-cols-3 md:grid-cols-2 gap-5 mx-2">
         {featuredRooms.map((featuredRoom) => (
           <ShowFeaturedRoom
             featuredRoom={featuredRoom}
