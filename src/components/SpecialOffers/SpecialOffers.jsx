@@ -12,7 +12,7 @@ const SpecialOffers = ({ offer }) => {
             {name}
           </h1>
           <div className="flex items-center border-t-2 border-t-border">
-            <FaTag className="text-[#b99470]" />
+            <FaTag className="text-blue" />
             <p className="ms-2 font-secondary text-[#656a70] py-2">
               {offersTitle}
             </p>
