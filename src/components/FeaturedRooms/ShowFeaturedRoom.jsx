@@ -42,7 +42,7 @@ const ShowFeaturedRoom = ({ featuredRoom }) => {
           </div>
         </Link>
         <Link to={`/showfeaturedroom/${_id}`}>
-          <h3 className="flex items-center">
+          <h3 className="flex items-center hover:text-blue">
             View Room{" "}
             <span className="ml-2">
               <FaChevronRight />
