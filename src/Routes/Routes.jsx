@@ -40,8 +40,10 @@ const Routes = createBrowserRouter([
           fetch(`http://localhost:5000/offers/${params.id}`),
       },
       {
-        path: "showfeaturedroom",
+        path: "showfeaturedroom/:id",
         element: <DetailsFeaturedRoom></DetailsFeaturedRoom>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/featured/${params.id}`),
       },
     ],
   },

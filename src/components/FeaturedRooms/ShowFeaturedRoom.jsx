@@ -11,7 +11,7 @@ import { FaRegBookmark } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const ShowFeaturedRoom = ({ featuredRoom }) => {
-  const { title, images, adults, size, view, price } = featuredRoom;
+  const { title, images, adults, size, view, price, _id } = featuredRoom;
   return (
     <div className="bg-white rounded border border-border">
       <img src={images} alt="" />
@@ -41,7 +41,7 @@ const ShowFeaturedRoom = ({ featuredRoom }) => {
             <span className="ms-2">Book Now</span>
           </div>
         </Link>
-        <Link to="/showfeaturedroom">
+        <Link to={`/showfeaturedroom/${_id}`}>
           <h3 className="flex items-center">
             View Room{" "}
             <span className="ml-2">
