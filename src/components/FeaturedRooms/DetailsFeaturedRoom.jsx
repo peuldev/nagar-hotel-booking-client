@@ -4,7 +4,8 @@ import { FaBed, FaRulerCombined, FaBinoculars } from "react-icons/fa";
 
 const DetailsFeaturedRoom = () => {
   const featuredRooms = useLoaderData();
-  const { title, images, adults, size, view, price, _id } = featuredRooms;
+  const { title, images, adults, size, view, price, _id, description } =
+    featuredRooms;
   return (
     <div className="max-w-7xl mx-auto font-secondary">
       <div className="flex justify-center">
@@ -28,6 +29,51 @@ const DetailsFeaturedRoom = () => {
             </p>
           </div>
           <img src={images} alt="" />
+        </div>
+      </div>
+      {/* ditails  */}
+      <div>
+        <div className="flex justify-center">
+          <h1 className="lg:text-3xl md:text-2xl text-xl text-center border-b-2 border-b-warning my-5 py-5 inline font-primary">
+            Room Description
+          </h1>
+        </div>
+        <div>
+          <p>{description}</p>
+        </div>
+        <div className="flex justify-center">
+          <h1 className="lg:text-3xl md:text-2xl text-xl text-center border-b-2 border-b-warning my-5 py-5 inline font-primary">
+            Facilities
+          </h1>
+        </div>
+        {/* table use  */}
+        <div className="max-w-2xl mx-auto">
+          <div className="overflow-x-auto">
+            <table className="table table-zebra">
+              <tbody>
+                {/* row 1 */}
+                <tr>
+                  <td>High speed in-room wifi</td>
+                  <td>Mini bar</td>
+                </tr>
+                {/* row 2 */}
+                <tr>
+                  <td>Swimming pool</td>
+                  <td>Child friendly</td>
+                </tr>
+                {/* row 3 */}
+                <tr>
+                  <td>Hot tub</td>
+                  <td>Games room</td>
+                </tr>
+                {/* row 4 */}
+                <tr>
+                  <td>Bath</td>
+                  <td>Wheelchair access</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
