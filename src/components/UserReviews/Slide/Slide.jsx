@@ -17,16 +17,16 @@ import gest4 from "../../../assets/Guests/gest-t4.jpg";
 import { Pagination } from "swiper/modules";
 export const Slide = () => {
   return (
-    <div>
+    <div className="text-white">
       <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
         <SwiperSlide>
-          <div className="max-w-5xl mx-auto">
+          <div className=" py-8">
             <div className="flex justify-center">
               <h1 className="lg:text-3xl md:text-2xl text-xl text-center border-b-2 border-b-warning my-5 py-5 inline font-primary">
                 Reviews
               </h1>
             </div>
-            <div>
+            <div className="max-w-4xl mx-auto">
               <p>
                 Sed sollicitudin, sem id imperdiet semper, enim ante tempor
                 sapien, a commodo nisl dolor at elit. Aliquam suscipit egestas
@@ -40,7 +40,88 @@ export const Slide = () => {
             </div>
             <div>
               <p className="py-5">
-                Maria Clarke - <span>Standard Room</span>
+                Maria Clarke -{" "}
+                <span className="font-medium">Standard Room</span>
+              </p>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className=" py-8">
+            <div className="flex justify-center">
+              <h1 className="lg:text-3xl md:text-2xl text-xl text-center border-b-2 border-b-warning my-5 py-5 inline font-primary">
+                Reviews
+              </h1>
+            </div>
+            <div className="max-w-4xl mx-auto">
+              <p>
+                Sed sollicitudin, sem id imperdiet semper, enim ante tempor
+                sapien, a commodo nisl dolor at elit. Aliquam suscipit egestas
+                velit at elementum. Nulla sit amet ligula at dolor rhoncus
+                rhoncus. Aenean molestie est tortor. Mauris dictum magna sit
+                amet velit ornare.
+              </p>
+            </div>
+            <div className="w-20 mx-auto py-5">
+              <img className="rounded-full" src={gest4} alt="" />
+            </div>
+            <div>
+              <p className="py-5">
+                Maria Clarke -{" "}
+                <span className="font-medium">Standard Room</span>
+              </p>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className=" py-8">
+            <div className="flex justify-center">
+              <h1 className="lg:text-3xl md:text-2xl text-xl text-center border-b-2 border-b-warning my-5 py-5 inline font-primary">
+                Reviews
+              </h1>
+            </div>
+            <div className="max-w-4xl mx-auto">
+              <p>
+                Sed sollicitudin, sem id imperdiet semper, enim ante tempor
+                sapien, a commodo nisl dolor at elit. Aliquam suscipit egestas
+                velit at elementum. Nulla sit amet ligula at dolor rhoncus
+                rhoncus. Aenean molestie est tortor. Mauris dictum magna sit
+                amet velit ornare.
+              </p>
+            </div>
+            <div className="w-20 mx-auto py-5">
+              <img className="rounded-full" src={gest3} alt="" />
+            </div>
+            <div>
+              <p className="py-5">
+                jersey_mae_poole{" "}
+                <span className="font-medium">Ensuite Room</span>
+              </p>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className=" py-8">
+            <div className="flex justify-center">
+              <h1 className="lg:text-3xl md:text-2xl text-xl text-center border-b-2 border-b-warning my-5 py-5 inline font-primary">
+                Reviews
+              </h1>
+            </div>
+            <div className="max-w-4xl mx-auto">
+              <p>
+                Sed sollicitudin, sem id imperdiet semper, enim ante tempor
+                sapien, a commodo nisl dolor at elit. Aliquam suscipit egestas
+                velit at elementum. Nulla sit amet ligula at dolor rhoncus
+                rhoncus. Aenean molestie est tortor. Mauris dictum magna sit
+                amet velit ornare.
+              </p>
+            </div>
+            <div className="w-20 mx-auto py-5">
+              <img className="rounded-full" src={gest2} alt="" />
+            </div>
+            <div>
+              <p className="py-5">
+                Gary Oldham - <span className="font-medium">Standard Room</span>
               </p>
             </div>
           </div>

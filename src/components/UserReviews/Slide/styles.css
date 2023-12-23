@@ -24,7 +24,9 @@ body {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: url(../../../assets/Hotel/reviews.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 
   /* Center slide text vertically */
   display: flex;
