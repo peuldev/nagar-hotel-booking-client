@@ -13,7 +13,7 @@ const BookingConfirmation = () => {
     const yourEmail = form.your_email.value;
     const CheckIn = form.Check_In.value;
     const CheckOut = form.Check_Out.value;
-    const ConfirmationInfo = {
+    const confirmationInfo = {
       firstName,
       lastName,
       location,
@@ -21,7 +21,22 @@ const BookingConfirmation = () => {
       CheckIn,
       CheckOut,
     };
-    console.log(ConfirmationInfo);
+    console.log(confirmationInfo);
+    fetch("http://localhost:5000/confirmation", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(confirmationInfo),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          alert("suscessfuly Confirmation");
+          e.target.reset();
+        }
+      });
   };
   return (
     <div className="max-w-7xl mx-auto">
