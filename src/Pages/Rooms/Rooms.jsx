@@ -9,7 +9,7 @@ const Rooms = () => {
       .then((data) => setRooms(data));
   }, []);
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
       <div className="lg:py-20 md:py-10 py-5 text-center space-y-2">
         <h1 className="lg:text-5xl md:text-3xl text-xl lg:font-bold md:font-semibold font-medium">
           Choose your Room
