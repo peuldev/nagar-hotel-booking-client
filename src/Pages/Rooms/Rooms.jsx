@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
+import DisplyRoom from "./DisplyRoom";
 
 const Rooms = () => {
-  const [featuredRooms, setfeaturedRooms] = useState([]);
+  const [Rooms, setRooms] = useState([]);
   useEffect(() => {
     fetch("http://localhost:5000/rooms")
       .then((res) => res.json())
-      .then((data) => setfeaturedRooms(data));
+      .then((data) => setRooms(data));
   }, []);
-  console.log(featuredRooms);
   return (
     <div>
       <div className="lg:py-20 md:py-10 py-5 text-center space-y-2">
@@ -19,6 +19,11 @@ const Rooms = () => {
           expedita accusamus impedit <br /> perspiciatis asperiores
           necessitatibus assumenda magnam ipsa.
         </p>
+      </div>
+      <div className="font-secondary grid lg:grid-cols-3 md:grid-cols-2 gap-5 mx-2">
+        {Rooms.map((room) => (
+          <DisplyRoom room={room} key={room.id}></DisplyRoom>
+        ))}
       </div>
     </div>
   );
