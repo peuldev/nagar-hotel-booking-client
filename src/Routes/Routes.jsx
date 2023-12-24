@@ -11,6 +11,7 @@ import DetailsFeaturedRoom from "../components/FeaturedRooms/DetailsFeaturedRoom
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import Booking from "../Pages/Rooms/booking";
 const Routes = createBrowserRouter([
   {
     path: "/",
@@ -56,6 +57,12 @@ const Routes = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp></SignUp>,
+      },
+      {
+        path: "booking/:id",
+        element: <Booking></Booking>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/rooms/${params.id}`),
       },
     ],
   },

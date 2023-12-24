@@ -31,7 +31,7 @@ const DisplyRoom = ({ room }) => {
           <span className="text-[#64bc5f] font-semibold">{price}</span>
           <span className="ms-2 text-[#64688c]">per night</span>
         </p>
-        <Link to="/rooms">
+        <Link to={`/booking/${_id}`}>
           <div className="bg-blue flex items-center hover:bg-info p-3 text-white rounded-full">
             <FaRegBookmark />
             <span className="ms-2">Book Now</span>

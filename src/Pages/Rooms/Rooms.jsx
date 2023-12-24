@@ -14,7 +14,7 @@ const Rooms = () => {
         <h1 className="lg:text-5xl md:text-3xl text-4xl lg:font-bold md:font-semibold font-semibold">
           Choose your Room
         </h1>
-        <p className="text-base text-[#64688c]">
+        <p className="lg:text-xl text-base text-[#64688c]">
           Laborum accusantium libero commodi. Voluptate consequatur itaque
           expedita accusamus impedit <br /> perspiciatis asperiores
           necessitatibus assumenda magnam ipsa.
