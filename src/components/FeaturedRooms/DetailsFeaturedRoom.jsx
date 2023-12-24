@@ -4,7 +4,7 @@ import { FaBed, FaRulerCombined, FaBinoculars } from "react-icons/fa";
 
 const DetailsFeaturedRoom = () => {
   const featuredRooms = useLoaderData();
-  const { title, images, adults, size, view, price, _id, description } =
+  const { title, image, adults, size, view, price, _id, description } =
     featuredRooms;
   return (
     <div className="max-w-7xl mx-auto font-secondary">
@@ -28,7 +28,7 @@ const DetailsFeaturedRoom = () => {
               City: {view}
             </p>
           </div>
-          <img src={images} alt="" />
+          <img src={image} alt="" />
         </div>
       </div>
       {/* ditails  */}

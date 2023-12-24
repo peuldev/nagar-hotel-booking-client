@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { FaEuroSign } from "react-icons/fa";
 
 const Booking = () => {
@@ -44,9 +44,11 @@ const Booking = () => {
                   <span className="ms-2">Per night</span>
                 </p>
               </div>
-              <div className=" text-xl py-3 px-5 rounded-full my-5 bg-blue hover:bg-info text-white cursor-pointer text-center">
-                <span>Confirm Booking</span>
-              </div>
+              <Link to={`/bookingconfirmation/${_id}`}>
+                <div className=" text-xl py-3 px-5 rounded-full my-5 bg-blue hover:bg-info text-white cursor-pointer text-center">
+                  <span>Confirm Booking</span>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -54,6 +56,11 @@ const Booking = () => {
           <h3 className="text-3xl font-semibold lg:py-10 py-5">{title}</h3>
           <p className="text-base text-[#656a70]">{description}</p>
         </div>
+      </div>
+      <div className="max-w-2xl mx-auto">
+        <h1 className="text-2xl font-semibold pt-5 font-secondary">
+          Write a review
+        </h1>
       </div>
       <div className="max-w-3xl mx-auto">
         <form className="card-body">
@@ -82,7 +89,7 @@ const Booking = () => {
 
           <div className="form-control mt-6 inline">
             <p className="bg-blue hover:bg-info text-white px-5 py-3 cursor-pointer text-base rounded-full inline">
-              Sumit
+              Submit
             </p>
           </div>
         </form>

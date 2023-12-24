@@ -12,6 +12,7 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Booking from "../Pages/Rooms/booking";
+import BookingConfirmation from "../Pages/Rooms/BookingConfirmation";
 const Routes = createBrowserRouter([
   {
     path: "/",
@@ -61,6 +62,12 @@ const Routes = createBrowserRouter([
       {
         path: "booking/:id",
         element: <Booking></Booking>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/rooms/${params.id}`),
+      },
+      {
+        path: "bookingconfirmation/:id",
+        element: <BookingConfirmation></BookingConfirmation>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/rooms/${params.id}`),
       },
