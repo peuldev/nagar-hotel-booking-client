@@ -11,7 +11,7 @@ const Rooms = () => {
   return (
     <div className="max-w-7xl mx-auto">
       <div className="lg:py-20 md:py-10 py-5 text-center space-y-2">
-        <h1 className="lg:text-5xl md:text-3xl text-xl lg:font-bold md:font-semibold font-medium">
+        <h1 className="lg:text-5xl md:text-3xl text-4xl lg:font-bold md:font-semibold font-semibold">
           Choose your Room
         </h1>
         <p className="text-base text-[#64688c]">
@@ -20,7 +20,7 @@ const Rooms = () => {
           necessitatibus assumenda magnam ipsa.
         </p>
       </div>
-      <div className="font-secondary grid lg:grid-cols-3 md:grid-cols-2 gap-5 mx-2">
+      <div className="font-secondary grid lg:grid-cols-3 md:grid-cols-2 gap-5 mx-2 lg:pb-28">
         {Rooms.map((room) => (
           <DisplyRoom room={room} key={room.id}></DisplyRoom>
         ))}

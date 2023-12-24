@@ -1,7 +1,6 @@
 import React from "react";
 import { FaUser, FaRulerCombined, FaEuroSign } from "react-icons/fa";
 import { FaRegBookmark, FaLocationDot } from "react-icons/fa6";
-import { CiLocationOn } from "react-icons/ci";
 
 import { Link } from "react-router-dom";
 
@@ -9,7 +8,9 @@ const DisplyRoom = ({ room }) => {
   const { title, image, adults, size, price, _id, location } = room;
   return (
     <div className="bg-white rounded border border-border">
-      <img src={image} alt="" />
+      <div className="flex justify-center lg:mt-4">
+        <img className="rounded" src={image} alt="" />
+      </div>
       <h1 className="border-b-2 border-b-border text-xl p-4">{title}</h1>
       <div className="p-4 space-y-5">
         <p className="text-[#656a70] flex items-center text-base">
@@ -36,14 +37,6 @@ const DisplyRoom = ({ room }) => {
             <span className="ms-2">Book Now</span>
           </div>
         </Link>
-        {/* <Link to={`/showfeaturedroom/${_id}`}>
-          <h3 className="flex items-center hover:text-blue">
-            View Room{" "}
-            <span className="ml-2">
-              <FaChevronRight />
-            </span>
-          </h3>
-        </Link> */}
       </div>
     </div>
   );
