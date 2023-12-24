@@ -43,13 +43,13 @@ const Routes = createBrowserRouter([
         path: "details/:id",
         element: <Details></Details>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/offers/${params.id}`),
+          fetch(`https://host-c81q.onrender.com/offers/${params.id}`),
       },
       {
         path: "showfeaturedroom/:id",
         element: <DetailsFeaturedRoom></DetailsFeaturedRoom>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/featured/${params.id}`),
+          fetch(`https://host-c81q.onrender.com/featured/${params.id}`),
       },
       {
         path: "/login",
@@ -63,13 +63,13 @@ const Routes = createBrowserRouter([
         path: "booking/:id",
         element: <Booking></Booking>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/rooms/${params.id}`),
+          fetch(`https://host-c81q.onrender.com/rooms/${params.id}`),
       },
       {
         path: "bookingconfirmation/:id",
         element: <BookingConfirmation></BookingConfirmation>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/rooms/${params.id}`),
+          fetch(`https://host-c81q.onrender.com/rooms/${params.id}`),
       },
     ],
   },

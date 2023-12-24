@@ -4,7 +4,7 @@ import DisplyRoom from "./DisplyRoom";
 const Rooms = () => {
   const [Rooms, setRooms] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/rooms")
+    fetch("https://host-c81q.onrender.com/rooms")
       .then((res) => res.json())
       .then((data) => setRooms(data));
   }, []);
