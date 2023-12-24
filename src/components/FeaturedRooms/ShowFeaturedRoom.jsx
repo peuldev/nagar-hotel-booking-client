@@ -11,10 +11,10 @@ import { FaRegBookmark } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const ShowFeaturedRoom = ({ featuredRoom }) => {
-  const { title, images, adults, size, view, price, _id } = featuredRoom;
+  const { title, image, adults, size, view, price, _id } = featuredRoom;
   return (
     <div className="bg-white rounded border border-border">
-      <img src={images} alt="" />
+      <img src={image} alt="" />
       <h1 className="border-b-2 border-b-border text-xl p-4">{title}</h1>
       <div className="p-4 space-y-5">
         <p className="text-[#656a70] flex items-center text-base">
@@ -35,7 +35,7 @@ const ShowFeaturedRoom = ({ featuredRoom }) => {
         </p>
       </div>
       <div className="p-4 flex items-center justify-between text-base">
-        <Link to="/rooms">
+        <Link to="rooms">
           <div className="bg-blue flex items-center hover:bg-info p-3 text-white rounded-full">
             <FaRegBookmark />
             <span className="ms-2">Book Now</span>
