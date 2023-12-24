@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const SignUp = () => {
+  const { createUser } = useContext(AuthContext);
   const handleSignUp = (e) => {
     e.preventDefault();
     const from = e.target;
@@ -10,6 +12,15 @@ const SignUp = () => {
     const password = from.password.value;
     const login = { name, email, password };
     console.log(login);
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        console.log(errorCode);
+      });
   };
   return (
     <div className="max-w-2xl mx-auto lg:py-20 md:py-10 py-5 font-secondary">
