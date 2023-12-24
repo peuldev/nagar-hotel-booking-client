@@ -27,7 +27,7 @@ const BookingConfirmation = () => {
     <div className="max-w-7xl mx-auto">
       <div className="mx-2">
         <div className=" lg:py-20 md:py-10 py-5 text-center space-y-2">
-          <h1 className="lg:text-5xl md:text-3xl text-4xl lg:font-bold md:font-semibold font-semibold ">
+          <h1 className="lg:text-5xl md:text-3xl text-4xl lg:font-bold md:font-semibold font-semibold  ">
             Booking Confirmation
           </h1>
           <p className="text-base py-2">
@@ -37,9 +37,11 @@ const BookingConfirmation = () => {
             </Link>{" "}
           </p>
         </div>
-        <div>
-          <h1>Booking Details</h1>
-          <p>Accommodation Type: {category}</p>
+        <div className="text-center">
+          <h1 className="text-2xl">Booking Details</h1>
+          <p className="text-xl mt-5">
+            Accommodation Type: <span className="border-b">{category}</span>
+          </p>
         </div>
         <div>
           <form className="card-body" onSubmit={handleConfirmation}>
