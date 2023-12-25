@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import BookingTabile from "./BookingTabile";
+import Swal from "sweetalert2";
 
 const MyBooking = () => {
   const { user } = useContext(AuthContext);
@@ -13,7 +14,6 @@ const MyBooking = () => {
       });
   }, []);
   const handleDelete = (id) => {
-    const proceed = confirm("are you sure delete");
     fetch(`http://localhost:5000/confirmation/${id}`, {
       method: "DELETE",
     })
@@ -21,7 +21,11 @@ const MyBooking = () => {
       .then((data) => {
         console.log(data);
         if (data.deletedCount > 0) {
-          alert("delete suscessfuly");
+          Swal.fire({
+            title: "NAGAR",
+            text: "Booking Delete Successfully",
+            icon: "success",
+          });
           const remaining = myBookings.filter((booking) => booking._id !== id);
           setmyBookings(remaining);
         }
