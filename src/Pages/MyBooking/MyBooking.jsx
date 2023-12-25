@@ -45,7 +45,7 @@ const MyBooking = () => {
               <th>location</th>
               <th>Date</th>
               <th>Email</th>
-              <th>Delete</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>

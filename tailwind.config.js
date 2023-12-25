@@ -10,6 +10,7 @@ export default {
       warning: "#ffc107",
       yellow: "#ffa505",
       border: "#dedede",
+      red: "#FF0000",
     },
     extend: {
       fontFamily: {

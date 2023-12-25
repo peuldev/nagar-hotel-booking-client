@@ -1,8 +1,18 @@
 import React from "react";
+import { MdDelete } from "react-icons/md";
+import { FiEdit } from "react-icons/fi";
 
-const BookingTabile = ({ myBooking, handleDelete }) => {
-  const { _id, firstName, lastName, location, email, checkIn, checkOut } =
-    myBooking;
+const BookingTabile = ({ myBooking, handleDelete, handleConfirm }) => {
+  const {
+    _id,
+    firstName,
+    lastName,
+    location,
+    email,
+    checkIn,
+    checkOut,
+    status,
+  } = myBooking;
   return (
     <>
       <tr>
@@ -15,7 +25,21 @@ const BookingTabile = ({ myBooking, handleDelete }) => {
         </td>
         <td>{email}</td>
         <td>
-          <button onClick={() => handleDelete(_id)}>Delete</button>
+          <div className="join  join-vertical lg:join-horizontal">
+            <button
+              className="btn join-item btn-sm hover:bg-info bg-blue text-white tooltip"
+              data-tip="Update"
+            >
+              <FiEdit />
+            </button>
+            <button
+              onClick={() => handleDelete(_id)}
+              className="btn join-item btn-sm bg-red hover:bg-[#EF4040] text-white tooltip"
+              data-tip="Delete"
+            >
+              <MdDelete />
+            </button>
+          </div>
         </td>
       </tr>
     </>
