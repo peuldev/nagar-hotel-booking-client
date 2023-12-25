@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCjCVjjKK4zUWUZic-7rbOg6jwSmsYXBeQ",
-  authDomain: "nagar-hotel.firebaseapp.com",
-  projectId: "nagar-hotel",
-  storageBucket: "nagar-hotel.appspot.com",
-  messagingSenderId: "972367511389",
-  appId: "1:972367511389:web:cea33a75fbbe6ca82332b4",
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase
