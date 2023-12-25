@@ -15,22 +15,36 @@ const MyBooking = () => {
       });
   }, []);
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/confirmation/${id}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        if (data.deletedCount > 0) {
-          Swal.fire({
-            title: "NAGAR",
-            text: "Booking Delete Successfully",
-            icon: "success",
+    Swal.fire({
+      title: "Are you sure?",
+      text: "Booking will be deleted",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // User clicked "Yes", proceed with deletion
+        fetch(`http://localhost:5000/confirmation/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount > 0) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Booking has been deleted.",
+                icon: "success",
+              });
+              const remaining = myBookings.filter(
+                (booking) => booking._id !== id
+              );
+              setmyBookings(remaining);
+            }
           });
-          const remaining = myBookings.filter((booking) => booking._id !== id);
-          setmyBookings(remaining);
-        }
-      });
+      }
+    });
   };
   return (
     <div className="max-w-7xl mx-auto lg:py-10 md:py-5 ">
