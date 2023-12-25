@@ -31,6 +31,15 @@ const Navbar = () => {
       <li>
         <NavLink to="shop">Shop</NavLink>
       </li>
+      {user?.email ? (
+        <>
+          <li>
+            <Link to="/mybooking">My Booking</Link>
+          </li>
+        </>
+      ) : (
+        <span></span>
+      )}
     </>
   );
   return (
