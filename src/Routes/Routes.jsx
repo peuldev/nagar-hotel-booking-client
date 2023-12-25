@@ -43,13 +43,21 @@ const Routes = createBrowserRouter([
       },
       {
         path: "details/:id",
-        element: <Details></Details>,
+        element: (
+          <PrivateRoutes>
+            <Details></Details>
+          </PrivateRoutes>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/offers/${params.id}`),
       },
       {
         path: "showfeaturedroom/:id",
-        element: <DetailsFeaturedRoom></DetailsFeaturedRoom>,
+        element: (
+          <PrivateRoutes>
+            <DetailsFeaturedRoom></DetailsFeaturedRoom>
+          </PrivateRoutes>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/featured/${params.id}`),
       },
