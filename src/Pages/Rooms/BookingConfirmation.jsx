@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const BookingConfirmation = () => {
   const BookingData = useLoaderData();
@@ -33,7 +34,12 @@ const BookingConfirmation = () => {
       .then((data) => {
         console.log(data);
         if (data.insertedId) {
-          alert("suscessfuly Confirmation");
+          // alert("suscessfuly Confirmation");
+          Swal.fire({
+            title: "NAGAR",
+            text: "Booking Confirm",
+            icon: "success",
+          });
           e.target.reset();
         }
       });
