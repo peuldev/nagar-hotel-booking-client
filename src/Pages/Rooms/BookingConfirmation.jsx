@@ -24,7 +24,7 @@ const BookingConfirmation = () => {
       CheckOut,
     };
     console.log(confirmationInfo);
-    fetch("http://localhost:5000/confirmation", {
+    fetch("https://nagar-hotel-booking-server.vercel.app/confirmation", {
       method: "POST",
       headers: {
         "content-type": "application/json",

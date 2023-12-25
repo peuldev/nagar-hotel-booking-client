@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 const Rooms = () => {
   const [Rooms, setRooms] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/rooms")
+    fetch("https://nagar-hotel-booking-server.vercel.app/rooms")
       .then((res) => res.json())
       .then((data) => setRooms(data));
   }, []);

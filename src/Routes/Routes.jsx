@@ -49,7 +49,9 @@ const Routes = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/offers/${params.id}`),
+          fetch(
+            `https://nagar-hotel-booking-server.vercel.app/offers/${params.id}`
+          ),
       },
       {
         path: "showfeaturedroom/:id",
@@ -59,7 +61,9 @@ const Routes = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/featured/${params.id}`),
+          fetch(
+            `https://nagar-hotel-booking-server.vercel.app/featured/${params.id}`
+          ),
       },
       {
         path: "/login",
@@ -77,13 +81,17 @@ const Routes = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/rooms/${params.id}`),
+          fetch(
+            `https://nagar-hotel-booking-server.vercel.app/rooms/${params.id}`
+          ),
       },
       {
         path: "bookingconfirmation/:id",
         element: <BookingConfirmation></BookingConfirmation>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/rooms/${params.id}`),
+          fetch(
+            `https://nagar-hotel-booking-server.vercel.app/rooms/${params.id}`
+          ),
       },
       {
         path: "mybooking",
