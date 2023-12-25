@@ -6,7 +6,7 @@ const PrivateRoutes = ({ children }) => {
   const { user, loding } = useContext(AuthContext);
   const location = useLocation();
   if (loding) {
-    return <progress className="progress w-56"></progress>;
+    return <span className="loading loading-ring loading-lg"></span>;
   }
   if (user?.email) {
     return children;

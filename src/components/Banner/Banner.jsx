@@ -16,7 +16,7 @@ const Banner = () => {
         <div className="max-w-7xl mx-auto">
           <div className="mx-2 lg:py-24 md:py-10 py-5">
             <div className="text-white text-center space-y-3 py-12">
-              <h1 className="lg:text-7xl md:text-5xl text-3xl font-medium ">
+              <h1 className="lg:text-7xl md:text-5xl text-3xl font-medium animate-pulse">
                 Welcome to Nagar
               </h1>
               <p className="lg:text-xl md:text-xl lg:py-5 md:py-2 ">
