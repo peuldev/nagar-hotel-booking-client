@@ -13,6 +13,7 @@ import SignUp from "../Pages/SignUp/SignUp";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Booking from "../Pages/Rooms/booking";
 import BookingConfirmation from "../Pages/Rooms/BookingConfirmation";
+import MyBooking from "../Pages/Rooms/MyBooking";
 const Routes = createBrowserRouter([
   {
     path: "/",
@@ -70,6 +71,10 @@ const Routes = createBrowserRouter([
         element: <BookingConfirmation></BookingConfirmation>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/rooms/${params.id}`),
+      },
+      {
+        path: "mybooking",
+        element: <MyBooking></MyBooking>,
       },
     ],
   },
