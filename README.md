@@ -29,3 +29,5 @@
 - Registered users can manage their profiles, view booking history, and save
   favorite hotels for future reference. This personalized experience enhances
   user engagement and streamlines the booking process for returning customers.
+
+[Live Visit Now](https://nagar-hotel.web.app)
