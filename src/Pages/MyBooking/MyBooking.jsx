@@ -12,7 +12,21 @@ const MyBooking = () => {
         setmyBookings(data);
       });
   }, []);
-  // const
+  const handleDelete = (id) => {
+    const proceed = confirm("are you sure delete");
+    fetch(`http://localhost:5000/confirmation/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.deletedCount > 0) {
+          alert("delete suscessfuly");
+          const remaining = myBookings.filter((booking) => booking._id !== id);
+          setmyBookings(remaining);
+        }
+      });
+  };
   return (
     <div className="max-w-7xl mx-auto lg:py-10 md:py-5 ">
       <h1 className="text-center py-5 text-2xl border-b border-b-border">
@@ -27,12 +41,11 @@ const MyBooking = () => {
           {/* head */}
           <thead>
             <tr>
-              <th></th>
               <th>Name</th>
               <th>location</th>
               <th>Date</th>
               <th>Email</th>
-              <th></th>
+              <th>Delete</th>
             </tr>
           </thead>
           <tbody>
@@ -40,6 +53,7 @@ const MyBooking = () => {
               <BookingTabile
                 myBooking={myBooking}
                 key={myBooking._id}
+                handleDelete={handleDelete}
               ></BookingTabile>
             ))}
           </tbody>
