@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -26,6 +27,9 @@ const Login = () => {
   };
   return (
     <div className="max-w-2xl mx-auto lg:py-20 md:py-10 py-5 font-secondary">
+      <Helmet>
+        <title>Login | Nagar</title>
+      </Helmet>
       <form className="card-body" onSubmit={handleLogin}>
         <div className="form-control">
           <label className="label">

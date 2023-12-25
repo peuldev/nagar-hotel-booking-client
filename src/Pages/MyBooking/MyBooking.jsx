@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import BookingTabile from "./BookingTabile";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const MyBooking = () => {
   const { user } = useContext(AuthContext);
@@ -33,6 +34,9 @@ const MyBooking = () => {
   };
   return (
     <div className="max-w-7xl mx-auto lg:py-10 md:py-5 ">
+      <Helmet>
+        <title>MyBooking | Nagar</title>
+      </Helmet>
       <h1 className="text-center py-5 text-2xl border-b border-b-border">
         Total Booking : <span className="font-bold">{myBookings.length}</span>
       </h1>

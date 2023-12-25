@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { FaEuroSign } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const Booking = () => {
   const booking = useLoaderData();
@@ -18,6 +19,9 @@ const Booking = () => {
   console.log(booking);
   return (
     <div className="mx-2">
+      <Helmet>
+        <title>Boking | Nagar</title>
+      </Helmet>
       <div className="max-w-2xl mx-auto">
         <div className="lg:py-20 md:py-10 py-5 text-center space-y-2">
           <h1 className="lg:text-5xl md:text-3xl text-4xl lg:font-bold md:font-semibold font-semibold">

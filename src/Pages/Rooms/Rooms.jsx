@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import DisplyRoom from "./DisplyRoom";
+import { Helmet } from "react-helmet-async";
 
 const Rooms = () => {
   const [Rooms, setRooms] = useState([]);
@@ -10,6 +11,9 @@ const Rooms = () => {
   }, []);
   return (
     <div className="max-w-7xl mx-auto">
+      <Helmet>
+        <title>Rooms | Nagar</title>
+      </Helmet>
       <div className="lg:py-20 md:py-10 py-5 text-center space-y-2">
         <h1 className="lg:text-5xl md:text-3xl text-4xl lg:font-bold md:font-semibold font-semibold">
           Choose your Room

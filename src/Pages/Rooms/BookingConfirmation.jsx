@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -46,6 +47,9 @@ const BookingConfirmation = () => {
   };
   return (
     <div className="max-w-7xl mx-auto">
+      <Helmet>
+        <title>BookingConfirmation | Nagar</title>
+      </Helmet>
       <div className="mx-2">
         <div className=" lg:py-20 md:py-10 py-5 text-center space-y-2">
           <h1 className="lg:text-5xl md:text-3xl text-4xl lg:font-bold md:font-semibold font-semibold  ">

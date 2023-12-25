@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const SignUp = () => {
   const { createUser } = useContext(AuthContext);
@@ -24,6 +25,9 @@ const SignUp = () => {
   };
   return (
     <div className="max-w-2xl mx-auto lg:py-20 md:py-10 py-5 font-secondary">
+      <Helmet>
+        <title>SignUp | Nagar</title>
+      </Helmet>
       <form className="card-body" onSubmit={handleSignUp}>
         <h1 className="text-4xl text-center">Create New Account</h1>
         <div className="form-control">

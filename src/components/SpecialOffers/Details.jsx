@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { FaTag } from "react-icons/fa6";
 import { Link, useLoaderData } from "react-router-dom";
 
@@ -18,6 +19,9 @@ const Details = () => {
   } = DetailsShow;
   return (
     <div className="max-w-7xl mx-auto font-secondary lg:py-20 md:py-20 py-5 ">
+      <Helmet>
+        <title>Details | Nagar</title>
+      </Helmet>
       <div className="flex justify-center">
         <div>
           <p className="text-3xl">{name}</p>
