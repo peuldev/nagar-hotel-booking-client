@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
   const navLinkis = (
     <>
       <li>
@@ -37,9 +48,20 @@ const Navbar = () => {
               </a>
             </div>
             <div className="flex items-center">
+              <div className="mr-3">{user && <span>{user.email}</span>}</div>
               <div className="border p-3 border-b-0 border-t-0 border-border">
                 <Link to="/login">
-                  <h3>My Account</h3>
+                  {user?.email ? (
+                    <span>
+                      {" "}
+                      <button onClick={handleLogOut}>LogOut</button>{" "}
+                    </span>
+                  ) : (
+                    <span>
+                      {" "}
+                      <Link to="/login">My Account</Link>{" "}
+                    </span>
+                  )}
                 </Link>
               </div>
               <div>
