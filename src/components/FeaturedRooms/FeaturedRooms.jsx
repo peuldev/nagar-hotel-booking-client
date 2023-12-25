@@ -4,7 +4,7 @@ import ShowFeaturedRoom from "./ShowFeaturedRoom";
 const FeaturedRooms = () => {
   const [featuredRooms, setfeaturedRooms] = useState([]);
   useEffect(() => {
-    fetch("https://host-c81q.onrender.com/featured")
+    fetch("http://localhost:5000/featured")
       .then((res) => res.json())
       .then((data) => setfeaturedRooms(data));
   }, []);

@@ -22,7 +22,7 @@ const BookingConfirmation = () => {
       CheckOut,
     };
     console.log(confirmationInfo);
-    fetch("https://host-c81q.onrender.com/confirmation", {
+    fetch("http://localhost:5000/confirmation", {
       method: "POST",
       headers: {
         "content-type": "application/json",
