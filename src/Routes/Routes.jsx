@@ -13,7 +13,7 @@ import SignUp from "../Pages/SignUp/SignUp";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Booking from "../Pages/Rooms/booking";
 import BookingConfirmation from "../Pages/Rooms/BookingConfirmation";
-import MyBooking from "../Pages/Rooms/MyBooking";
+import MyBooking from "../Pages/MyBooking/MyBooking";
 import PrivateRoutes from "./PrivateRoutes";
 const Routes = createBrowserRouter([
   {
