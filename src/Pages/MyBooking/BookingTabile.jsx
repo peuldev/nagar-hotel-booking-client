@@ -2,17 +2,10 @@ import React from "react";
 import { MdDelete } from "react-icons/md";
 import { FiEdit } from "react-icons/fi";
 
-const BookingTabile = ({ myBooking, handleDelete, handleConfirm }) => {
-  const {
-    _id,
-    firstName,
-    lastName,
-    location,
-    email,
-    checkIn,
-    checkOut,
-    status,
-  } = myBooking;
+const BookingTabile = ({ myBooking, handleDelete }) => {
+  const { _id, firstName, lastName, location, yourEmail, CheckIn, CheckOut } =
+    myBooking;
+
   return (
     <>
       <tr>
@@ -21,9 +14,9 @@ const BookingTabile = ({ myBooking, handleDelete, handleConfirm }) => {
         </td>
         <td>{location}</td>
         <td>
-          In {checkIn} Out {checkOut}
+          In {CheckIn} Out {CheckOut}
         </td>
-        <td>{email}</td>
+        <td>{yourEmail}</td>
         <td>
           <div className="join  join-vertical lg:join-horizontal">
             <button
