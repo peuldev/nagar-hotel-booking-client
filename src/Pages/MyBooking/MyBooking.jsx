@@ -8,7 +8,7 @@ const MyBooking = () => {
   const { user } = useContext(AuthContext);
   const [myBookings, setmyBookings] = useState([]);
   useEffect(() => {
-    fetch("https://nagar-hotel-booking-server.vercel.app/confirmation")
+    fetch("http://localhost:5000/confirmation")
       .then((res) => res.json())
       .then((data) => {
         setmyBookings(data);
@@ -26,12 +26,9 @@ const MyBooking = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         // User clicked "Yes", proceed with deletion
-        fetch(
-          `https://nagar-hotel-booking-server.vercel.app/confirmation/${id}`,
-          {
-            method: "DELETE",
-          }
-        )
+        fetch(`http://localhost:5000/confirmation/${id}`, {
+          method: "DELETE",
+        })
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {

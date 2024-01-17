@@ -4,7 +4,7 @@ import SpecialOffers from "./SpecialOffers";
 const Offers = () => {
   const [offers, setOffers] = useState([]);
   useEffect(() => {
-    fetch("https://nagar-hotel-booking-server.vercel.app/offers")
+    fetch("http://localhost:5000/offers")
       .then((res) => res.json())
       .then((data) => setOffers(data));
   }, []);
