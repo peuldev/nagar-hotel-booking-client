@@ -80,7 +80,7 @@ const Login = () => {
       </form>
       <div
         onClick={handeGoogleLogin}
-        className="flex items-center mx-auto border border-primary_color hover:bg-blue hover:text-white rounded-lg py-2 px-5 w-1/2 cursor-pointer"
+        className="flex items-center mx-auto border border-primary_color hover:bg-blue hover:text-white rounded-lg py-2 px-5 w-1/2 justify-center cursor-pointer"
       >
         <img className="w-5" src={logo} alt="" />
         <p className="ml-2"> Continue with Google</p>
