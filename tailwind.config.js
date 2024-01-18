@@ -11,6 +11,7 @@ export default {
       yellow: "#ffa505",
       border: "#dedede",
       red: "#FF0000",
+      primary_color: "#dedede",
     },
     extend: {
       fontFamily: {

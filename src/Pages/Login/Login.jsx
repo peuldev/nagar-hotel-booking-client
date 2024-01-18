@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import logo from "../../assets/logo/gogle.svg";
 
 const Login = () => {
   const { signIn, signInWithGoogle } = useContext(AuthContext);
@@ -77,9 +78,13 @@ const Login = () => {
           </p>
         </div>
       </form>
-      <button onClick={handeGoogleLogin} className="btn btn-primary">
-        google
-      </button>
+      <div
+        onClick={handeGoogleLogin}
+        className="flex items-center mx-auto border border-primary_color hover:bg-blue hover:text-white rounded-lg py-2 px-5 w-1/2 cursor-pointer"
+      >
+        <img className="w-5" src={logo} alt="" />
+        <p className="ml-2"> Continue with Google</p>
+      </div>
     </div>
   );
 };
