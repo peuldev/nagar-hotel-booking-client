@@ -4,7 +4,7 @@ import ShowFeaturedRoom from "./ShowFeaturedRoom";
 const FeaturedRooms = () => {
   const [featuredRooms, setfeaturedRooms] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/featured")
+    fetch("https://nagar-hotel-booking.vercel.app/featured")
       .then((res) => res.json())
       .then((data) => setfeaturedRooms(data));
   }, []);
