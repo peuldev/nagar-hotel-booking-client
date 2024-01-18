@@ -4,7 +4,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, signInWithGoogle } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const handleLogin = (e) => {
@@ -24,6 +24,14 @@ const Login = () => {
         const errorCode = error.code;
         console.log(errorCode);
       });
+  };
+  const handeGoogleLogin = () => {
+    signInWithGoogle()
+      .then((result) => {
+        console.log(result.user);
+        navigate("/");
+      })
+      .then((error) => console.error(error));
   };
   return (
     <div className="max-w-2xl mx-auto lg:py-20 md:py-10 py-5 font-secondary">
@@ -69,6 +77,9 @@ const Login = () => {
           </p>
         </div>
       </form>
+      <button onClick={handeGoogleLogin} className="btn btn-primary">
+        google
+      </button>
     </div>
   );
 };
