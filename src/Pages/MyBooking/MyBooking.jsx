@@ -47,13 +47,18 @@ const MyBooking = () => {
     });
   };
   return (
-    <div className="max-w-7xl mx-auto lg:py-10 md:py-5 ">
+    <div className="max-w-7xl mx-auto lg:py-10 md:py-5 min-h-screen">
       <Helmet>
         <title>MyBooking | Nagar</title>
       </Helmet>
-      <h1 className="text-center py-5 text-2xl border-b border-b-border">
-        Total Booking : <span className="font-bold">{myBookings.length}</span>
+      <h1 className="text-center  text-2xl border-b border-b-border">
+        <div className="flex justify-center">
+          <h1 className="lg:text-3xl md:text-2xl text-xl text-center border-b-2 border-b-warning my-5 py-5 inline">
+            Total Booking : {myBookings.length}
+          </h1>
+        </div>
       </h1>
+
       <div className="block md:hidden lg:hidden mx-2 text-center py-5">
         <h1 className="text-xl">Small Device Not Available Booking data</h1>
         <p className="text-base">Please Login Labtop or Computer</p>

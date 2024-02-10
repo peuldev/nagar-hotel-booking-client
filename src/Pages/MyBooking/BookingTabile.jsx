@@ -1,6 +1,7 @@
 import React from "react";
 import { MdDelete } from "react-icons/md";
 import { FiEdit } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const BookingTabile = ({ myBooking, handleDelete }) => {
   const { _id, firstName, lastName, location, yourEmail, CheckIn, CheckOut } =
@@ -23,7 +24,10 @@ const BookingTabile = ({ myBooking, handleDelete }) => {
               className="btn join-item btn-sm hover:bg-info bg-blue text-white tooltip"
               data-tip="Update"
             >
-              <FiEdit />
+              <Link to="/updateinfo">
+                {" "}
+                <FiEdit />
+              </Link>
             </button>
             <button
               onClick={() => handleDelete(_id)}

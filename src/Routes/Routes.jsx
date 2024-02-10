@@ -15,6 +15,7 @@ import Booking from "../Pages/Rooms/booking";
 import BookingConfirmation from "../Pages/Rooms/BookingConfirmation";
 import MyBooking from "../Pages/MyBooking/MyBooking";
 import PrivateRoutes from "./PrivateRoutes";
+import UpdateInfo from "../Pages/MyBooking/UpdateInfo";
 const Routes = createBrowserRouter([
   {
     path: "/",
@@ -92,6 +93,10 @@ const Routes = createBrowserRouter([
             <MyBooking></MyBooking>
           </PrivateRoutes>
         ),
+      },
+      {
+        path: "updateinfo",
+        element: <UpdateInfo></UpdateInfo>,
       },
     ],
   },
