@@ -23,7 +23,6 @@ const BookingConfirmation = () => {
       CheckIn,
       CheckOut,
     };
-    console.log(confirmationInfo);
     fetch("http://localhost:5000/confirmation", {
       method: "POST",
       headers: {
@@ -33,7 +32,6 @@ const BookingConfirmation = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.insertedId) {
           // alert("suscessfuly Confirmation");
           Swal.fire({

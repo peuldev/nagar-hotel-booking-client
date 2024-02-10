@@ -14,22 +14,19 @@ const Login = () => {
     const email = from.email.value;
     const password = from.password.value;
     const login = { email, password };
-    console.log(login);
+
     signIn(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
         navigate(location?.state ? location?.state : "/");
       })
       .catch((error) => {
         const errorCode = error.code;
-        console.log(errorCode);
       });
   };
   const handeGoogleLogin = () => {
     signInWithGoogle()
       .then((result) => {
-        console.log(result.user);
         navigate("/");
       })
       .then((error) => console.error(error));

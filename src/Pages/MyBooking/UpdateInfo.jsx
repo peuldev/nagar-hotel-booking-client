@@ -1,12 +1,12 @@
 import { Helmet } from "react-helmet-async";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateInfo = () => {
   const info = useLoaderData();
+  const navigate = useNavigate();
   const { firstName, lastName, location, yourEmail, CheckIn, CheckOut, _id } =
     info;
-  console.log(info);
   const handleUpdateInfo = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -24,7 +24,6 @@ const UpdateInfo = () => {
       CheckIn,
       CheckOut,
     };
-    console.log(updateInfo);
     fetch(`http://localhost:5000/confirmation/${_id}`, {
       method: "PUT",
       headers: {
@@ -34,7 +33,6 @@ const UpdateInfo = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.acknowledged) {
           Swal.fire({
             title: "success",
@@ -42,7 +40,7 @@ const UpdateInfo = () => {
             icon: "success",
             confirmButtonText: "OK",
           });
-          e.target.reset();
+          navigate("/mybooking");
         }
       });
   };

@@ -13,16 +13,13 @@ const SignUp = () => {
     const email = from.email.value;
     const password = from.password.value;
     const login = { name, email, password };
-    console.log(login);
     createUser(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
         navigate("/");
       })
       .catch((error) => {
         const errorCode = error.code;
-        console.log(errorCode);
       });
   };
   return (

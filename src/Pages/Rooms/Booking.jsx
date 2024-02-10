@@ -16,7 +16,6 @@ const Booking = () => {
     location,
     description,
   } = booking;
-  console.log(booking);
   return (
     <div className="mx-2">
       <Helmet>
