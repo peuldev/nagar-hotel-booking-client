@@ -17,6 +17,7 @@ export default {
       fontFamily: {
         primary: ["'Jost', sans-serif"],
         secondary: ["'Poppins', sans-serif"],
+        fraunces: ["'Fraunces', serif"],
       },
     },
   },

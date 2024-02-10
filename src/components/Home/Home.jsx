@@ -4,6 +4,7 @@ import Offers from "../SpecialOffers/Offers";
 import Reviews from "../UserReviews/Reviews";
 import FeaturedRooms from "../FeaturedRooms/FeaturedRooms";
 import { Helmet } from "react-helmet-async";
+import Services from "../Services/Services";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <FeaturedRooms></FeaturedRooms>
       <Offers></Offers>
       <Reviews></Reviews>
+      <Services></Services>
     </div>
   );
 };
