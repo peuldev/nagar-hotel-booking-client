@@ -1,9 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateInfo = () => {
   const info = useLoaderData();
-  const { firstName, lastName, location, yourEmail, CheckIn, CheckOut } = info;
+  const { firstName, lastName, location, yourEmail, CheckIn, CheckOut, _id } =
+    info;
   console.log(info);
   const handleUpdateInfo = (e) => {
     e.preventDefault();
@@ -23,6 +25,26 @@ const UpdateInfo = () => {
       CheckOut,
     };
     console.log(updateInfo);
+    fetch(`http://localhost:5000/confirmation/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updateInfo),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.acknowledged) {
+          Swal.fire({
+            title: "success",
+            text: "Info Update SuccessFuly",
+            icon: "success",
+            confirmButtonText: "OK",
+          });
+          e.target.reset();
+        }
+      });
   };
   return (
     <div className="max-w-7xl mx-auto lg:py-10 md:py-5 px-2">
