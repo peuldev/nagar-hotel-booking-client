@@ -24,7 +24,7 @@ const BookingTabile = ({ myBooking, handleDelete }) => {
               className="btn join-item btn-sm hover:bg-info bg-blue text-white tooltip"
               data-tip="Update"
             >
-              <Link to="/updateinfo">
+              <Link to={`/updateinfo/${_id}`}>
                 {" "}
                 <FiEdit />
               </Link>

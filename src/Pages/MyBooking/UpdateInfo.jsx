@@ -1,6 +1,10 @@
 import { Helmet } from "react-helmet-async";
+import { useLoaderData } from "react-router-dom";
 
 const UpdateInfo = () => {
+  const info = useLoaderData();
+  const { firstName, lastName, location, yourEmail, CheckIn, CheckOut } = info;
+  console.log(info);
   const handleUpdateInfo = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -42,6 +46,7 @@ const UpdateInfo = () => {
               className="input input-bordered"
               required
               name="first_name"
+              defaultValue={firstName}
             />
           </div>
           <div className="form-control">
@@ -54,6 +59,7 @@ const UpdateInfo = () => {
               className="input input-bordered"
               required
               name="last_name"
+              defaultValue={lastName}
             />
           </div>
           <div className="form-control">
@@ -66,6 +72,7 @@ const UpdateInfo = () => {
               className="input input-bordered"
               required
               name="location"
+              defaultValue={location}
             />
           </div>
           <div className="form-control">
@@ -78,6 +85,7 @@ const UpdateInfo = () => {
               className="input input-bordered"
               required
               name="your_email"
+              defaultValue={yourEmail}
             />
           </div>
           <div className="form-control">
@@ -90,6 +98,7 @@ const UpdateInfo = () => {
               className="input input-bordered"
               required
               name="Check_In"
+              defaultValue={CheckIn}
             />
           </div>
           <div className="form-control">
@@ -102,6 +111,7 @@ const UpdateInfo = () => {
               className="input input-bordered"
               required
               name="Check_Out"
+              defaultValue={CheckOut}
             />
           </div>
         </div>

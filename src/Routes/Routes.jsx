@@ -95,8 +95,10 @@ const Routes = createBrowserRouter([
         ),
       },
       {
-        path: "updateinfo",
+        path: "/updateinfo/:id",
         element: <UpdateInfo></UpdateInfo>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/confirmation/${params.id}`),
       },
     ],
   },
