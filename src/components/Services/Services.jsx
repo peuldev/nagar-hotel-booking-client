@@ -49,8 +49,8 @@ const Services = () => {
                 y2="9.55863"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#D95103"></stop>
-                <stop offset="0.526042" stop-color="#F28705"></stop>
+                <stop stopColor="#D95103"></stop>
+                <stop offset="0.526042" stopColor="#F28705"></stop>
               </linearGradient>
             </defs>
           </svg>
@@ -74,7 +74,7 @@ const Services = () => {
             fill="none"
             className="mx-auto"
           >
-            <g clip-path="url(#clip0_30_524)">
+            <g clipPath="url(#clip0_30_524)">
               <path
                 d="M50.8245 33.25C51.5148 33.25 52.0745 32.6904 52.0745 32C52.0745 31.3096 51.5148 30.75 50.8245 30.75C50.1341 30.75 49.5745 31.3096 49.5745 32C49.5745 32.6904 50.1341 33.25 50.8245 33.25Z"
                 fill="#3C3B40"
@@ -97,8 +97,8 @@ const Services = () => {
                 y2="-1.63019"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#D95103"></stop>
-                <stop offset="0.526042" stop-color="#F28705"></stop>
+                <stop stopcolorr="#D95103"></stop>
+                <stop offset="0.526042" stopColor="#F28705"></stop>
               </linearGradient>
               <clipPath id="clip0_30_524">
                 <rect width="64" height="64" fill="white"></rect>
@@ -124,7 +124,7 @@ const Services = () => {
             fill="none"
             className="mx-auto"
           >
-            <g clip-path="url(#clip0_30_494)">
+            <g clipPath="url(#clip0_30_494)">
               <path
                 d="M19.7171 14.1711C20.4089 14.1711 20.9696 13.6104 20.9696 12.9186V1.2525C20.9696 0.560875 20.4089 0 19.7171 0C19.0254 0 18.4646 0.56075 18.4646 1.2525V12.9187C18.4646 13.6104 19.0254 14.1711 19.7171 14.1711Z"
                 fill="#3C3B40"
@@ -151,8 +151,8 @@ const Services = () => {
                 y2="-1.63019"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#D95103"></stop>
-                <stop offset="0.526042" stop-color="#F28705"></stop>
+                <stop stopColor="#D95103"></stop>
+                <stop offset="0.526042" stopColor="#F28705"></stop>
               </linearGradient>
               <clipPath id="clip0_30_494">
                 <rect width="64" height="64" fill="white"></rect>
