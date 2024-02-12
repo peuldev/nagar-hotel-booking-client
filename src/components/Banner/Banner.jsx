@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 import coverImages from "../../assets/Hotel/image-banner.jpg";
 import icon1 from "../../assets/icon/f-1.png";
@@ -7,6 +7,19 @@ import icon3 from "../../assets/icon/f-3.png";
 import icon4 from "../../assets/icon/f-4.png";
 
 const Banner = () => {
+  const [showSearch, setShowSearch] = useState([]);
+  const [search, setSearch] = useState("");
+  useEffect(() => {
+    fetch(`http://localhost:5000/rooms?search=${search}`)
+      .then((res) => res.json())
+      .then((data) => setShowSearch(data));
+  }, [search]);
+  const handleSearchText = (e) => {
+    e.preventDefault();
+    const searchText = e.target.search.value;
+    setSearch(searchText);
+  };
+  console.log(showSearch);
   return (
     <div>
       <div style={{ backgroundImage: "url(" + coverImages + ")" }}>
@@ -45,7 +58,6 @@ const Banner = () => {
                   type="date"
                 />
               </div>
-
               <div className="join">
                 <button className="mr-3 text-base text-[#64688c]">
                   Adults
@@ -84,6 +96,23 @@ const Banner = () => {
                 </p>{" "}
               </div>
             </div>
+          </div>
+          <div className="justify-center">
+            <form onSubmit={handleSearchText}>
+              <input
+                type="text"
+                placeholder="Type here"
+                className="input input-bordered w-full max-w-xs mr-5"
+                name="search"
+              />
+              <input
+                type="submit"
+                name=""
+                className="btn"
+                value="Search"
+                id=""
+              />
+            </form>
           </div>
         </div>
         {/* banner end  */}

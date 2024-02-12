@@ -24,7 +24,7 @@ const UpdateInfo = () => {
       CheckIn,
       CheckOut,
     };
-    fetch(`https://nagar-hotel-booking-server.vercel.app/confirmation/${_id}`, {
+    fetch(`http://localhost:5000/confirmation/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
